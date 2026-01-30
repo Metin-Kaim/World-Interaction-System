@@ -52,6 +52,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedKey
       objectReference: {fileID: 0}
+    - target: {fileID: 4147606872356854334, guid: c12b7288146b9e74d98c24a8552d470f, type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147606872356854334, guid: c12b7288146b9e74d98c24a8552d470f, type: 3}
+      propertyPath: outlineColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147606872356854334, guid: c12b7288146b9e74d98c24a8552d470f, type: 3}
+      propertyPath: outlineColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4421297761998288675, guid: c12b7288146b9e74d98c24a8552d470f, type: 3}
       propertyPath: keyData
       value: 

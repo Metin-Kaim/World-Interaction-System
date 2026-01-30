@@ -10,12 +10,20 @@ namespace Assets.WorldInteractionSystem.Scripts.Abstracts
     {
         [SerializeField] protected InteractionData interactionData;
 
+        protected Outline m_outline;
+
         public virtual bool CanInteract { get; set; }
 
         public InteractionCapabilities Capabilities =>
             interactionData != null
                 ? interactionData.capabilities
                 : InteractionCapabilities.None;
+
+        protected virtual void Awake()
+        {
+            m_outline = GetComponentInParent<Outline>();
+            m_outline.enabled = false;
+        }
 
         protected virtual void Start()
         {
@@ -55,5 +63,15 @@ namespace Assets.WorldInteractionSystem.Scripts.Abstracts
         }
 
         public abstract void Interact(InteractionResult result);
+
+        public void Over()
+        {
+            m_outline.enabled = true;
+        }
+
+        public void Exit()
+        {
+            m_outline.enabled = false;
+        }
     }
 }

@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressThreshold: 0.25
   holdThreshold: 0.5
-  rayDistance: 3
+  rayDistance: 4
   interactableLayers:
     serializedVersion: 2
     m_Bits: 64

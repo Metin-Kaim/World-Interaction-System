@@ -40,10 +40,17 @@ namespace Assets.WorldInteractionSystem.Scripts.Player
 
             if (Physics.Raycast(ray, out RaycastHit hit, rayDistance, interactableLayers))
             {
+                if (currentInteractable != null && (currentInteractable as MonoBehaviour).gameObject == hit.collider.gameObject) return;
+
+                currentInteractable?.Exit();
+
                 currentInteractable = hit.collider.GetComponentInParent<IInteractable>();
+
+                currentInteractable?.Over();
             }
             else
             {
+                currentInteractable?.Exit();
                 currentInteractable = null;
             }
         }

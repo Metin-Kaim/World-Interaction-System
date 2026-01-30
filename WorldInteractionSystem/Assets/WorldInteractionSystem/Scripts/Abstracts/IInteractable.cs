@@ -9,6 +9,9 @@ namespace Assets.WorldInteractionSystem.Scripts.Abstracts
 
         InteractionCapabilities Capabilities { get; }
 
+        void Over();
+        void Exit();
+
         InteractionUIData GetUIData();
 
         void Interact(InteractionResult result);

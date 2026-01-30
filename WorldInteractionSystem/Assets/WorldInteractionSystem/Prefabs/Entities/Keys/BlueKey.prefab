@@ -50,7 +50,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2038379118548029529, guid: c12b7288146b9e74d98c24a8552d470f, type: 3}
       propertyPath: m_Name
-      value: Key
+      value: BlueKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147606872356854334, guid: c12b7288146b9e74d98c24a8552d470f, type: 3}
+      propertyPath: outlineColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147606872356854334, guid: c12b7288146b9e74d98c24a8552d470f, type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147606872356854334, guid: c12b7288146b9e74d98c24a8552d470f, type: 3}
+      propertyPath: outlineColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

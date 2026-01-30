@@ -1,4 +1,5 @@
 ﻿using Assets.WorldInteractionSystem.Scripts.Signals;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +12,7 @@ namespace Assets.WorldInteractionSystem.Scripts.Inputs
 
         private Vector2 m_moveInput;
         private Vector2 m_lookInput;
+        private bool m_isPressingInteractionKey;
 
         private void Awake()
         {
@@ -21,22 +23,26 @@ namespace Assets.WorldInteractionSystem.Scripts.Inputs
             m_playerActions.Move.canceled += OnMove;
             m_playerActions.Look.performed += OnLook;
             m_playerActions.Look.canceled += OnLook;
+            m_playerActions.Interact.performed += OnInteract;
+            m_playerActions.Interact.canceled += OnInteract;
         }
 
         private void OnEnable()
         {
             m_playerActions.Enable();
 
-            InputSignals.Instance.OnGetMoveValue += OnGetMoveInput;
+            InputSignals.Instance.OnGetMoveInput += OnGetMoveInput;
             InputSignals.Instance.OnGetLookInput += OnGetLookInput;
+            InputSignals.Instance.OnGetInteractionValue += OnGetInteractionValue;
         }
 
         private void OnDisable()
         {
             m_playerActions.Disable();
 
-            InputSignals.Instance.OnGetMoveValue -= OnGetMoveInput;
+            InputSignals.Instance.OnGetMoveInput -= OnGetMoveInput;
             InputSignals.Instance.OnGetLookInput -= OnGetLookInput;
+            InputSignals.Instance.OnGetInteractionValue -= OnGetInteractionValue;
         }
 
         private void OnDestroy()
@@ -45,8 +51,14 @@ namespace Assets.WorldInteractionSystem.Scripts.Inputs
             m_playerActions.Move.canceled -= OnMove;
             m_playerActions.Look.performed -= OnLook;
             m_playerActions.Look.canceled -= OnLook;
+            m_playerActions.Interact.performed -= OnInteract;
+            m_playerActions.Interact.canceled -= OnInteract;
 
             m_playerActions.Disable();
+        }
+        private void OnInteract(InputAction.CallbackContext context)
+        {
+            m_isPressingInteractionKey = context.ReadValueAsButton();
         }
 
         private void OnLook(InputAction.CallbackContext context)
@@ -67,6 +79,11 @@ namespace Assets.WorldInteractionSystem.Scripts.Inputs
         {
             return m_lookInput;
         }
+        private bool OnGetInteractionValue()
+        {
+            return m_isPressingInteractionKey;
+        }
+
     }
 
 }

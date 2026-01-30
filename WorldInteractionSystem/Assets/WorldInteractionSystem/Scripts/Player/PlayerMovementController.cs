@@ -37,7 +37,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void ReadInput()
     {
-        m_moveInput = InputSignals.Instance.OnGetMoveValue.Invoke();
+        m_moveInput = InputSignals.Instance.OnGetMoveInput.Invoke();
 
         Vector2 lookInput = InputSignals.Instance.OnGetLookInput.Invoke();
         m_rotationInput = lookInput.x * m_horizontalMouseSensitivity * Time.deltaTime;

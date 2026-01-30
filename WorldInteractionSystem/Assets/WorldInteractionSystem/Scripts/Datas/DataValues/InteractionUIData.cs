@@ -1,5 +1,5 @@
 ﻿
-namespace Assets.WorldInteractionSystem.Scripts.Datas.Interactions
+namespace Assets.WorldInteractionSystem.Scripts.Datas.DataValues
 {
     public struct InteractionUIData
     {

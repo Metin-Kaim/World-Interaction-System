@@ -1,6 +1,6 @@
 ﻿using Assets.WorldInteractionSystem.Scripts.Abstracts;
 using Assets.WorldInteractionSystem.Scripts.Canvas;
-using Assets.WorldInteractionSystem.Scripts.Datas.Interactions;
+using Assets.WorldInteractionSystem.Scripts.Datas.DataValues;
 using Assets.WorldInteractionSystem.Scripts.Enums;
 using Assets.WorldInteractionSystem.Scripts.Signals;
 using UnityEngine;

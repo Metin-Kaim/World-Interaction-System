@@ -1,29 +1,22 @@
 ﻿using Assets.WorldInteractionSystem.Scripts.Abstracts;
-using Assets.WorldInteractionSystem.Scripts.Datas.Interactions;
-using Assets.WorldInteractionSystem.Scripts.Enums;
+using Assets.WorldInteractionSystem.Scripts.Datas.DataValues;
 using UnityEngine;
 
 namespace Assets.WorldInteractionSystem.Scripts.Entities
 {
-    public class DoorHandler : MonoBehaviour, IInteractable
+    public class DoorHandler : BaseInteractable
     {
-        public InteractionCapabilities Capabilities =>
-            InteractionCapabilities.Hold;
+        private bool isOpen;
 
-        public bool CanInteract => true;
-
-        public InteractionUIData GetUIData()
+        protected override bool ShouldUseAlternateText()
         {
-            return new InteractionUIData
-            {
-                Text = "E Open",
-                ShowProgress = true
-            };
+            return isOpen;
         }
 
-        public void Interact(InteractionResult result)
+        public override void Interact(InteractionResult result)
         {
-            Debug.Log("Door Opened");
+            isOpen = !isOpen;
+            Debug.Log(isOpen ? "Door opened" : "Door closed");
         }
     }
 }

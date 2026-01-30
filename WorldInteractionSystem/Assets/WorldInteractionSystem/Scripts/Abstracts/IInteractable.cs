@@ -1,4 +1,4 @@
-﻿using Assets.WorldInteractionSystem.Scripts.Datas.Interactions;
+﻿using Assets.WorldInteractionSystem.Scripts.Datas.DataValues;
 using Assets.WorldInteractionSystem.Scripts.Enums;
 
 namespace Assets.WorldInteractionSystem.Scripts.Abstracts
@@ -10,6 +10,7 @@ namespace Assets.WorldInteractionSystem.Scripts.Abstracts
         InteractionCapabilities Capabilities { get; }
 
         InteractionUIData GetUIData();
+
         void Interact(InteractionResult result);
     }
 

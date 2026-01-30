@@ -1,6 +1,6 @@
 ﻿using Assets.WorldInteractionSystem.Scripts.Enums;
 
-namespace Assets.WorldInteractionSystem.Scripts.Datas.Interactions
+namespace Assets.WorldInteractionSystem.Scripts.Datas.DataValues
 {
     public struct InteractionResult
     {

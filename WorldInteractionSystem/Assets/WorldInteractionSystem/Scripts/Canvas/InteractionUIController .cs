@@ -1,4 +1,4 @@
-﻿using Assets.WorldInteractionSystem.Scripts.Datas.Interactions;
+﻿using Assets.WorldInteractionSystem.Scripts.Datas.DataValues;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

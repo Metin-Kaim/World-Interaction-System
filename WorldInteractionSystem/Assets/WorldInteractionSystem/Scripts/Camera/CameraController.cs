@@ -13,7 +13,7 @@ namespace Assets.WorldInteractionSystem.Scripts.Camera
 
         private float m_currentPitch;
 
-        private void Update()
+        private void LateUpdate()
         {
             RotateCamera();
         }

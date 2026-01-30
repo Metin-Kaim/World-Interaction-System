@@ -2,7 +2,6 @@
 using Assets.WorldInteractionSystem.Scripts.Datas.DataValues;
 using Assets.WorldInteractionSystem.Scripts.Datas.UnityValues;
 using DG.Tweening;
-using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 namespace Assets.WorldInteractionSystem.Scripts.Entities

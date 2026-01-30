@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: KeyInteraction
   m_EditorClassIdentifier: 
   capabilities: 1
-  defaultText: '[E] Take'
+  defaultText: Press E to Take
   useAlternateText: 0
   alternateText: 
   showProgress: 0

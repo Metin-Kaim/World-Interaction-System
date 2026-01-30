@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DoorInteraction
   m_EditorClassIdentifier: 
   capabilities: 2
-  defaultText: '[Hold E] Open'
+  defaultText: Hold E to Open
   useAlternateText: 1
-  alternateText: '[Hold E] Close'
+  alternateText: Hold E to Close
   showProgress: 1

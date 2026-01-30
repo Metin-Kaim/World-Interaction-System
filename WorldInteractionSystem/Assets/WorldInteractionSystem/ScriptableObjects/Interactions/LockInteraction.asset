@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LockInteraction
   m_EditorClassIdentifier: 
   capabilities: 1
-  defaultText: '"{KEY}" Required'
+  defaultText: Locked - "{KEY}" Required
   useAlternateText: 1
   alternateText: '[E] Open The Lock'
   showProgress: 0

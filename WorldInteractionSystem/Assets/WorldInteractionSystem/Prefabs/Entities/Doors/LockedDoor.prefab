@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4311497610704297406}
   - component: {fileID: 6866284619792103741}
   m_Layer: 0
-  m_Name: Door_1_Black
+  m_Name: LockedDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

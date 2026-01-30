@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ButtonInteraction
   m_EditorClassIdentifier: 
   capabilities: 1
-  defaultText: '[E] Turn On'
+  defaultText: Press E to Turn On
   useAlternateText: 1
-  alternateText: '[E] Turn Off'
+  alternateText: Press E to Turn Off
   showProgress: 0

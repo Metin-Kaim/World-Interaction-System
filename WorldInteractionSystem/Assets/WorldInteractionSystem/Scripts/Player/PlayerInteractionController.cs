@@ -13,6 +13,7 @@ namespace Assets.WorldInteractionSystem.Scripts.Player
         [SerializeField] private float pressThreshold = 0.25f;
         [SerializeField] private float holdThreshold = 0.75f;
         [SerializeField] private float rayDistance = 3f;
+        [SerializeField] private LayerMask interactableLayers;
 
         [Header("References")]
         [SerializeField] private UnityEngine.Camera playerCamera;
@@ -37,7 +38,7 @@ namespace Assets.WorldInteractionSystem.Scripts.Player
         {
             Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
 
-            if (Physics.Raycast(ray, out RaycastHit hit, rayDistance))
+            if (Physics.Raycast(ray, out RaycastHit hit, rayDistance, interactableLayers))
             {
                 currentInteractable = hit.collider.GetComponent<IInteractable>();
             }

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5af93280c937f4439707f1c2deea3d1, type: 3}
-  m_Name: ChestInteraction
+  m_Name: ButtonInteraction
   m_EditorClassIdentifier: 
-  capabilities: 2
-  defaultText: '[Hold E] Open'
-  useAlternateText: 0
-  alternateText: 
+  capabilities: 1
+  defaultText: '[E] Turn On'
+  useAlternateText: 1
+  alternateText: '[E] Turn Off'
   showProgress: 0

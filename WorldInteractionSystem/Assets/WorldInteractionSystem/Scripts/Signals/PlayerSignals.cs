@@ -1,21 +1,23 @@
-﻿using System.Collections;
+﻿using Assets.WorldInteractionSystem.Scripts.Datas.UnityValues;
+using Assets.WorldInteractionSystem.Scripts.Enums;
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.WorldInteractionSystem.Scripts.Signals
 {
     public class PlayerSignals : MonoBehaviour
     {
+        public static PlayerSignals Instance;
 
-        // Use this for initialization
-        void Start()
+        public Func<KeyData, bool> HasKey = (keyType) => false;
+        public UnityAction<KeyData> OnAddKey = delegate { };
+        public UnityAction<KeyData> OnConsumeKey = delegate { };
+        public UnityAction<KeyData, int> OnKeyChanged = delegate { };
+
+        private void Awake()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            Instance = this;
         }
     }
 }

@@ -40,7 +40,7 @@ namespace Assets.WorldInteractionSystem.Scripts.Player
 
             if (Physics.Raycast(ray, out RaycastHit hit, rayDistance, interactableLayers))
             {
-                currentInteractable = hit.collider.GetComponent<IInteractable>();
+                currentInteractable = hit.collider.GetComponentInParent<IInteractable>();
             }
             else
             {

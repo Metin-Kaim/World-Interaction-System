@@ -1,5 +1,8 @@
 ﻿using Assets.WorldInteractionSystem.Scripts.Abstracts;
 using Assets.WorldInteractionSystem.Scripts.Datas.DataValues;
+using Assets.WorldInteractionSystem.Scripts.Datas.UnityValues;
+using Assets.WorldInteractionSystem.Scripts.Enums;
+using Assets.WorldInteractionSystem.Scripts.Signals;
 using UnityEngine;
 
 namespace Assets.WorldInteractionSystem.Scripts.Entities
@@ -12,10 +15,7 @@ namespace Assets.WorldInteractionSystem.Scripts.Entities
 
         public override void Interact(InteractionResult result)
         {
-            if (isOpened) return;
-
             isOpened = true;
-            Debug.Log("Chest opened");
         }
     }
 }

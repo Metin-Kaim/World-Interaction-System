@@ -10,12 +10,17 @@ namespace Assets.WorldInteractionSystem.Scripts.Abstracts
     {
         [SerializeField] protected InteractionData interactionData;
 
-        public virtual bool CanInteract => true;
+        public virtual bool CanInteract { get; set; }
 
         public InteractionCapabilities Capabilities =>
             interactionData != null
                 ? interactionData.capabilities
                 : InteractionCapabilities.None;
+
+        protected virtual void Start()
+        {
+            CanInteract = true;
+        }
 
         public virtual InteractionUIData GetUIData()
         {
@@ -25,16 +30,24 @@ namespace Assets.WorldInteractionSystem.Scripts.Abstracts
             string text = interactionData.defaultText;
 
             if (interactionData.useAlternateText &&
-                ShouldUseAlternateText())
+                ShouldUseAlternateText() &&
+                !string.IsNullOrEmpty(interactionData.alternateText))
             {
                 text = interactionData.alternateText;
             }
+
+            // 🔹 INSTANCE-SPECIFIC TEXT FORMAT
+            text = FormatUIText(text);
 
             return new InteractionUIData
             {
                 Text = text,
                 ShowProgress = interactionData.showProgress
             };
+        }
+        protected virtual string FormatUIText(string rawText)
+        {
+            return rawText;
         }
         protected virtual bool ShouldUseAlternateText()
         {
